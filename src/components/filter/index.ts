@@ -1,0 +1,1 @@
+export { AnimeThemeFilter } from "./AnimeThemeFilter";

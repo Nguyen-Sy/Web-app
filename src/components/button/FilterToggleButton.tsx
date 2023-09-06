@@ -1,0 +1,9 @@
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import { IconTextButton } from "components/button";
+import type { ComponentPropsWithoutRef } from "react";
+
+export function FilterToggleButton(props: Partial<ComponentPropsWithoutRef<typeof IconTextButton>>) {
+    return (
+        <IconTextButton icon={faFilter} collapsible {...props}>Filter</IconTextButton>
+    );
+}

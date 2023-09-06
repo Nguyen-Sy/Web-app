@@ -72,6 +72,16 @@ const nextConfig = {
         ];
     },
     basePath: "/wiki",
+    async redirects() {
+        return [
+            {
+                source: "/",
+                destination: "/wiki",
+                permanent: true,
+                basePath: false,
+            },
+        ];
+    },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);

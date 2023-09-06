@@ -1,5 +1,10 @@
 const { info, error } = require("next/dist/build/output/log");
-const { ANALYZE, STAGING, BASE_PATH, validateConfig } = require("./src/utils/config");
+const {
+    ANALYZE,
+    STAGING,
+    BASE_PATH,
+    validateConfig,
+} = require("./src/utils/config");
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: ANALYZE,
@@ -23,7 +28,7 @@ const nextConfig = {
     basePath: BASE_PATH,
     reactStrictMode: true,
     compiler: {
-        styledComponents: true
+        styledComponents: true,
     },
     staticPageGenerationTimeout: 3600,
     experimental: {
@@ -40,32 +45,33 @@ const nextConfig = {
                 headers: [
                     {
                         key: "X-DNS-Prefetch-Control",
-                        value: "on"
+                        value: "on",
                     },
                     {
                         key: "Strict-Transport-Security",
-                        value: "max-age=63072000; includeSubDomains; preload"
+                        value: "max-age=63072000; includeSubDomains; preload",
                     },
                     {
                         key: "X-XSS-Protection",
-                        value: "1; mode=block"
+                        value: "1; mode=block",
                     },
                     {
                         key: "X-Frame-Options",
-                        value: "SAMEORIGIN"
+                        value: "SAMEORIGIN",
                     },
                     {
                         key: "X-Content-Type-Options",
-                        value: "nosniff"
+                        value: "nosniff",
                     },
                     {
                         key: "Referrer-Policy",
-                        value: "origin-when-cross-origin"
-                    }
-                ]
-            }
+                        value: "origin-when-cross-origin",
+                    },
+                ],
+            },
         ];
-    }
+    },
+    basePath: "/wiki",
 };
 
 module.exports = withBundleAnalyzer(nextConfig);

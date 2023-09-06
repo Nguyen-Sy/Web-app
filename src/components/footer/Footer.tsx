@@ -67,28 +67,6 @@ export function Footer() {
                         Contact
                     </FooterTextLink> */}
                 </StyledLinkList>
-                <StyledSocialList>
-                    <FooterLink href="https://reddit.com/r/AnimeThemes">
-                        <StyledSocialButton title="Reddit">
-                            <Icon icon={faReddit}/>
-                        </StyledSocialButton>
-                    </FooterLink>
-                    <FooterLink href="https://discordapp.com/invite/m9zbVyQ">
-                        <StyledSocialButton title="Discord">
-                            <Icon icon={faDiscord}/>
-                        </StyledSocialButton>
-                    </FooterLink>
-                    <FooterLink href="https://twitter.com/AnimeThemesMoe">
-                        <StyledSocialButton title="Twitter">
-                            <Icon icon={faTwitter}/>
-                        </StyledSocialButton>
-                    </FooterLink>
-                    <FooterLink href="https://github.com/AnimeThemes">
-                        <StyledSocialButton title="GitHub">
-                            <Icon icon={faGithub}/>
-                        </StyledSocialButton>
-                    </FooterLink>
-                </StyledSocialList>
             </StyledContainer>
         </StyledFooter>
     );
